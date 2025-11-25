@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Buon compleanno Maria! Un piccolo pensiero per te.">
+    <title>Buon compleanno Maria!</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <!-- Preload critical fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Background Elements -->
+    <div class="background-animation"></div>
+    <div class="floating-hearts" id="floatingHearts"></div>
+
+    <!-- Modals Container -->
+    <div class="modal-overlay active" id="mainModalOverlay">
+
+        <!-- 1. Intro Step -->
+        <div class="modal-step active" id="stepIntro">
+            <div class="modal-card glass-effect">
+                <div class="modal-icon">💕</div>
+                <h1 class="modal-title">X accedere a qst pensierino dv prima farti un test...</h1>
+                <button class="btn-primary" onclick="nextStep('stepQuiz')">Inizia! 💖</button>
+            </div>
+        </div>
+
+        <!-- 2. Quiz Step -->
+        <div class="modal-step" id="stepQuiz">
+            <div class="modal-card glass-effect">
+                <h2 class="modal-title">Qual è il mio kolore preferito? 🎨🤔</h2>
+                <div class="quiz-options">
+                    <button class="btn-option" onclick="checkAnswer(this, 'arancione')">Arancione 🧡</button>
+                    <button class="btn-option" onclick="checkAnswer(this, 'viola')">Viola 💜</button>
+                    <button class="btn-option" onclick="checkAnswer(this, 'blu')">Blu 💙</button>
+                    <button class="btn-option" onclick="checkAnswer(this, 'rosso')">Rosso ❤️</button>
+                </div>
+                <p class="feedback-text" id="quizFeedback"></p>
+            </div>
+        </div>
+
+        <!-- 3. Love Slider Step -->
+        <div class="modal-step" id="stepSlider">
+            <div class="modal-card glass-effect">
+                <h2 class="modal-title">E qnt ti amo sekondo te...? 📏❤️</h2>
+
+                <div class="slider-wrapper">
+                    <div class="slider-value" id="sliderValue">0</div>
+                    <input type="range" min="0" max="999999" value="0" class="love-slider" id="loveSlider">
+                    <div class="slider-labels">
+                        <span>Poco 🤏</span>
+                        <span>Tanto 🙌</span>
+                        <span>Infinito ♾️</span>
+                    </div>
+                </div>
+
+                <button class="btn-primary" id="submitSlider" onclick="checkSlider()">Conferma ❤️🥰</button>
+                <p class="feedback-text" id="sliderFeedback"></p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Main Content (Hidden initially) -->
+    <main class="main-content" id="mainContent">
+
+        <header class="hero-header">
+            <div class="header-content">
+                <h1 class="title-script">Buon compleanno</h1>
+                <p class="subtitle">Alla mia moglie fantastica...</p>
+            </div>
+        </header>
+
+        <div class="content-wrapper">
+
+            <!-- Top Gallery Section -->
+            <section class="gallery-section gallery-top">
+                <div class="polaroid-container">
+                    <div class="polaroid p1" onclick="openLightbox('assets/1.JPG')">
+                        <div class="polaroid-inner"><img src="assets/1.JPG" alt="Ricordo 1" loading="lazy"></div>
+                    </div>
+                    <div class="polaroid p2" onclick="openLightbox('assets/2.JPG')">
+                        <div class="polaroid-inner"><img src="assets/2.JPG" alt="Ricordo 2" loading="lazy"></div>
+                    </div>
+                    <div class="polaroid p3" onclick="openLightbox('assets/3.JPG')">
+                        <div class="polaroid-inner"><img src="assets/3.JPG" alt="Ricordo 3" loading="lazy"></div>
+                    </div>
+                    <div class="polaroid p4" onclick="openLightbox('assets/4.JPG')">
+                        <div class="polaroid-inner"><img src="assets/4.JPG" alt="Ricordo 4" loading="lazy"></div>
+                    </div>
+                    <div class="polaroid p5" onclick="openLightbox('assets/5.JPG')">
+                        <div class="polaroid-inner"><img src="assets/5.JPG" alt="Ricordo 5" loading="lazy"></div>
+                    </div>
+                    <div class="polaroid p6" onclick="openLightbox('assets/6.JPG')">
+                        <div class="polaroid-inner"><img src="assets/6.JPG" alt="Ricordo 6" loading="lazy"></div>
+                    </div>
+                    <div class="polaroid p7" onclick="openLightbox('assets/7.JPG')">
+                        <div class="polaroid-inner"><img src="assets/7.JPG" alt="Ricordo 7" loading="lazy"></div>
+                    </div>
+                    <div class="polaroid p8" onclick="openLightbox('assets/8.JPG')">
+                        <div class="polaroid-inner"><img src="assets/8.JPG" alt="Ricordo 8" loading="lazy"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Letter Section -->
+            <section class="letter-section">
+                <article class="paper-letter">
+                    <div class="stamp-mark">C+M=❤️</div>
+                    <div class="letter-content">
+                        <h2 class="letter-greeting">Amore Mio,</h2>
+
+                        <p>Oggi celebriamo <strong>te</strong> – la persona più incredibile che sia mai entrata nella
+                            mia vita. In questo giorno speciale, voglio che tu sappia che sei il mio <em>sole</em>, la
+                            mia <em>ispirazione</em> e il motivo per cui sorrido ogni singolo giorno.</p>
+
+                        <p>Dal momento in cui ci siamo incontrati, hai riempito il mio mondo di colori che non sapevo
+                            esistessero. La tua <strong>risata</strong> è la mia melodia preferita, il tuo
+                            <strong>sorriso</strong> è il mio tesoro più grande, e il tuo <strong>amore</strong> è il
+                            regalo più prezioso che abbia mai ricevuto.
+                        </p>
+
+                        <p>Ogni giorno con te è un'avventura, un bellissimo viaggio che non voglio finisca mai. Rendi
+                            straordinario l'ordinario e trasformi i momenti semplici in ricordi preziosi. Sono così
+                            <em>grato</em> per ogni secondo che passiamo insieme e non vedo l'ora di creare infiniti
+                            altri bellissimi ricordi con te.
+                        </p>
+
+                        <p>Mentre festeggi un altro anno della tua vita meravigliosa, voglio che tu sappia che il mio
+                            amore per te cresce ogni giorno di più. Meriti tutta la <strong>felicità</strong>, tutta la
+                            <strong>gioia</strong> e tutto l'<strong>amore</strong> del mondo – e prometto di passare
+                            ogni giorno cercando di darti esattamente questo.
+                        </p>
+
+                        <p>Buon Compleanno, amore mio. A te, a noi e a un futuro pieno di amore infinito, risate e
+                            momenti indimenticabili. Sei il mio <em>per sempre</em> e sono così fortunato a poterti
+                            chiamare mia.</p>
+
+                        <div class="signature">
+                            <p>Per sempre tuo,</p>
+                            <p class="sig-name">Carmine.</p>
+                            <span class="heart-icon">❤️</span>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <!-- Bottom Gallery Section -->
+            <section class="gallery-section gallery-bottom">
+                <div class="polaroid-container">
+                    <div class="polaroid p9" onclick="openLightbox('assets/9.JPG')">
+                        <div class="polaroid-inner"><img src="assets/9.JPG" alt="Ricordo 9" loading="lazy"></div>
+                    </div>
+                    <div class="polaroid p10" onclick="openLightbox('assets/10.JPG')">
+                        <div class="polaroid-inner"><img src="assets/10.JPG" alt="Ricordo 10" loading="lazy"></div>
+                    </div>
+                    <div class="polaroid p11" onclick="openLightbox('assets/11.jpg')">
+                        <div class="polaroid-inner"><img src="assets/11.jpg" alt="Ricordo 11" loading="lazy"></div>
+                    </div>
+                    <div class="polaroid p12" onclick="openLightbox('assets/12.JPG')">
+                        <div class="polaroid-inner"><img src="assets/12.JPG" alt="Ricordo 12" loading="lazy"></div>
+                    </div>
+                    <div class="polaroid p13" onclick="openLightbox('assets/13.JPG')">
+                        <div class="polaroid-inner"><img src="assets/13.JPG" alt="Ricordo 13" loading="lazy"></div>
+                    </div>
+                    <div class="polaroid p14" onclick="openLightbox('assets/14.JPG')">
+                        <div class="polaroid-inner"><img src="assets/14.JPG" alt="Ricordo 14" loading="lazy"></div>
+                    </div>
+                    <div class="polaroid p15" onclick="openLightbox('assets/15.JPG')">
+                        <div class="polaroid-inner"><img src="assets/15.JPG" alt="Ricordo 15" loading="lazy"></div>
+                    </div>
+                    <div class="polaroid p16" onclick="openLightbox('assets/16.JPG')">
+                        <div class="polaroid-inner"><img src="assets/16.JPG" alt="Ricordo 16" loading="lazy"></div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <footer>
+            <p>Fatto cn il ❤️ da Karmine x te</p>
+        </footer>
+    </main>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <button class="lightbox-close">&times;</button>
+        <div class="lightbox-content">
+            <img id="lightboxImg" src="" alt="">
+        </div>
+    </div>
+
+    <script>
+        // --- Logic ---
+
+        // State
+        const CORRECT_COLOR = 'viola';
+        const MAX_SLIDER = 999999;
+
+        // Elements
+        const modalOverlay = document.getElementById('mainModalOverlay');
+        const mainContent = document.getElementById('mainContent');
+        const slider = document.getElementById('loveSlider');
+        const sliderVal = document.getElementById('sliderValue');
+
+        // Navigation
+        function nextStep(stepId) {
+            // Hide all active steps
+            document.querySelectorAll('.modal-step').forEach(el => {
+                el.classList.remove('active');
+                el.style.display = 'none'; // Ensure they are hidden
+            });
+
+            // Show new step
+            const next = document.getElementById(stepId);
+            next.style.display = 'flex';
+            // Small delay to allow display:flex to apply before adding opacity class
+            setTimeout(() => next.classList.add('active'), 10);
+        }
+
+        // Quiz Logic
+        function checkAnswer(btn, answer) {
+            const feedback = document.getElementById('quizFeedback');
+            const allBtns = document.querySelectorAll('.btn-option');
+
+            // Disable buttons temporarily
+            allBtns.forEach(b => b.style.pointerEvents = 'none');
+
+            if (answer === CORRECT_COLOR) {
+                btn.classList.add('correct');
+                feedback.textContent = "Brv... Ci siamo quasi...";
+                feedback.className = "feedback-text success";
+
+                setTimeout(() => {
+                    nextStep('stepSlider');
+                }, 1500);
+            } else {
+                btn.classList.add('wrong');
+                feedback.textContent = "Ma...";
+                feedback.className = "feedback-text error";
+
+                setTimeout(() => {
+                    btn.classList.remove('wrong');
+                    allBtns.forEach(b => b.style.pointerEvents = 'auto');
+                    feedback.textContent = "";
+                }, 1500);
+            }
+        }
+
+        // Slider Logic
+        slider.addEventListener('input', (e) => {
+            const val = parseInt(e.target.value);
+            if (val === MAX_SLIDER) {
+                sliderVal.textContent = "∞";
+                sliderVal.classList.add('pulse');
+            } else {
+                sliderVal.textContent = val.toLocaleString('it-IT');
+                sliderVal.classList.remove('pulse');
+            }
+        });
+
+        function checkSlider() {
+            const val = parseInt(slider.value);
+            const feedback = document.getElementById('sliderFeedback');
+            const oneThird = MAX_SLIDER / 3;
+            const twoThirds = (MAX_SLIDER / 3) * 2;
+
+            if (val === MAX_SLIDER) {
+                feedback.textContent = "WOW 6 BRAVISSIMA! hai vnt il premio!";
+                feedback.className = "feedback-text success";
+
+                // Unlock site
+                setTimeout(() => {
+                    modalOverlay.classList.add('fade-out');
+                    setTimeout(() => {
+                        modalOverlay.style.display = 'none';
+                        mainContent.classList.add('visible');
+                        startConfetti();
+                    }, 800);
+                }, 1500);
+
+            } else if (val < oneThird) {
+                feedback.textContent = "Scordatelo.";
+                feedback.className = "feedback-text error";
+            } else if (val < twoThirds) {
+                feedback.textContent = "Sono arrabbiato.";
+                feedback.className = "feedback-text error";
+            } else {
+                feedback.textContent = "Ma per chi mi hai preso. 😠";
+                feedback.className = "feedback-text error";
+            }
+        }
+
+        // Lightbox Logic
+        function openLightbox(src) {
+            const lb = document.getElementById('lightbox');
+            const img = document.getElementById('lightboxImg');
+            img.src = src;
+            lb.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const lb = document.getElementById('lightbox');
+            lb.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Floating Hearts Animation
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerHTML = ['❤️', '💖', '💕', '💗'][Math.floor(Math.random() * 4)];
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = (Math.random() * 3 + 2) + 's';
+            heart.style.opacity = Math.random() * 0.5 + 0.3;
+
+            document.getElementById('floatingHearts').appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 5000);
+        }
+
+        setInterval(createHeart, 800);
+
+        // Simple Confetti for success
+        function startConfetti() {
+            for (let i = 0; i < 50; i++) {
+                setTimeout(createHeart, i * 50);
+            }
+        }
+
+    </script>
+</body>
+
+</html>
