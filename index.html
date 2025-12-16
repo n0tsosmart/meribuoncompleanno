@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="Buon compleanno Maria! Un piccolo pensiero per te.">
     <title>Buon compleanno Maria!</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.css?v=29">
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
     <!-- Preload critical fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Dancing+Script:wght@400;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500&display=swap"
         rel="stylesheet">
 </head>
 
@@ -27,6 +27,11 @@
         <!-- 1. Intro Step -->
         <div class="modal-step active" id="stepIntro">
             <div class="modal-card glass-effect">
+                <div class="progress-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
                 <div class="modal-icon">💕</div>
                 <h1 class="modal-title">X accedere a qst pensierino dv prima farti un test...</h1>
                 <button class="btn-primary" onclick="nextStep('stepQuiz')">Inizia! 💖</button>
@@ -36,6 +41,11 @@
         <!-- 2. Quiz Step -->
         <div class="modal-step" id="stepQuiz">
             <div class="modal-card glass-effect">
+                <div class="progress-dots">
+                    <span class="dot completed">✓</span>
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                </div>
                 <h2 class="modal-title">Qual è il mio kolore preferito? 🎨🤔</h2>
                 <div class="quiz-options">
                     <button class="btn-option" onclick="checkAnswer(this, 'arancione')">Arancione 🧡</button>
@@ -50,6 +60,11 @@
         <!-- 3. Love Slider Step -->
         <div class="modal-step" id="stepSlider">
             <div class="modal-card glass-effect">
+                <div class="progress-dots">
+                    <span class="dot completed">✓</span>
+                    <span class="dot completed">✓</span>
+                    <span class="dot active"></span>
+                </div>
                 <h2 class="modal-title">E qnt ti amo sekondo te...? 📏❤️</h2>
 
                 <div class="slider-wrapper">
@@ -71,13 +86,6 @@
 
     <!-- Main Content (Hidden initially) -->
     <main class="main-content" id="mainContent">
-
-        <header class="hero-header">
-            <div class="header-content">
-                <h1 class="title-script">Buon compleanno</h1>
-                <p class="subtitle">Alla mia moglie fantastica...</p>
-            </div>
-        </header>
 
         <div class="content-wrapper">
 
@@ -111,42 +119,62 @@
                 </div>
             </section>
 
+            <!-- Title Header -->
+            <header class="hero-header">
+                <div class="header-content">
+                    <h1 class="title-script">Buon Komplelanno</h1>
+                    <p class="subtitle">A MIA MOGLIE!!!</p>
+                </div>
+            </header>
+
             <!-- Letter Section -->
             <section class="letter-section">
                 <article class="paper-letter">
-                    <div class="stamp-mark">C+M=❤️</div>
                     <div class="letter-content">
-                        <h2 class="letter-greeting">Amore Mio,</h2>
 
-                        <p>Oggi celebriamo <strong>te</strong> – la persona più incredibile che sia mai entrata nella
-                            mia vita. In questo giorno speciale, voglio che tu sappia che sei il mio <em>sole</em>, la
-                            mia <em>ispirazione</em> e il motivo per cui sorrido ogni singolo giorno.</p>
+                        <h2 class="letter-greeting">X la mia Maria</h2>
 
-                        <p>Dal momento in cui ci siamo incontrati, hai riempito il mio mondo di colori che non sapevo
-                            esistessero. La tua <strong>risata</strong> è la mia melodia preferita, il tuo
-                            <strong>sorriso</strong> è il mio tesoro più grande, e il tuo <strong>amore</strong> è il
-                            regalo più prezioso che abbia mai ricevuto.
-                        </p>
+                        <div class="poem" id="poem">
+                            <p class="stanza">
+                                <span class="drop-cap">O</span>ggi è festa per una bimba speciale,<br>
+                                morpida, unica, eccezionale,<br>
+                                anche se spesso, tra un riso e un problema,<br>
+                                sa essere dolke, ma un pochino scema...
+                            </p>
 
-                        <p>Ogni giorno con te è un'avventura, un bellissimo viaggio che non voglio finisca mai. Rendi
-                            straordinario l'ordinario e trasformi i momenti semplici in ricordi preziosi. Sono così
-                            <em>grato</em> per ogni secondo che passiamo insieme e non vedo l'ora di creare infiniti
-                            altri bellissimi ricordi con te.
-                        </p>
+                            <div class="poem-divider">💕</div>
 
-                        <p>Mentre festeggi un altro anno della tua vita meravigliosa, voglio che tu sappia che il mio
-                            amore per te cresce ogni giorno di più. Meriti tutta la <strong>felicità</strong>, tutta la
-                            <strong>gioia</strong> e tutto l'<strong>amore</strong> del mondo – e prometto di passare
-                            ogni giorno cercando di darti esattamente questo.
-                        </p>
+                            <p class="stanza">
+                                Amo di te la tua pankia soave,<br>
+                                dei miei desideri possiedi la chiave,<br>
+                                i fianki, le kurve, quel modo di fare:<br>
+                                sei kosì bll, tutta da lekkeggiare...
+                            </p>
 
-                        <p>Buon Compleanno, amore mio. A te, a noi e a un futuro pieno di amore infinito, risate e
-                            momenti indimenticabili. Sei il mio <em>per sempre</em> e sono così fortunato a poterti
-                            chiamare mia.</p>
+                            <div class="poem-divider">💗</div>
 
-                        <div class="signature">
-                            <p>Per sempre tuo,</p>
-                            <p class="sig-name">Carmine.</p>
+                            <p class="stanza">
+                                Il tempo con te è un regalo del destino,<br>
+                                benedico ogni bakio e ogni grattino,<br>
+                                respiro con te, nella gioia e nei guai,<br>
+                                anche quando... un po' d'aria tu fai...
+                            </p>
+
+                            <div class="poem-divider">💖</div>
+
+                            <p class="stanza">
+                                Quest'anno ripaga ogni tuo sacrificio,<br>
+                                è l'alba di un nuovo, stupendo inizio.<br>
+                                Auguri piccola, mio immenso amore,<br>
+                                ti amo così forte che mi scoppia il kuore.
+                            </p>
+                        </div>
+
+                        <div class="signature" id="signature">
+                            <p>X sempre tuo,</p>
+                            <p class="sig-name">Karmine. <span
+                                    style="font-size: 0.6em; margin-left: 10px; color: var(--text-light);">16 dicembre
+                                    2025</span></p>
                             <span class="heart-icon">❤️</span>
                         </div>
                     </div>
@@ -175,7 +203,7 @@
                         <div class="polaroid-inner"><img src="assets/14.JPG" alt="Ricordo 14" loading="lazy"></div>
                     </div>
                     <div class="polaroid p15" onclick="openLightbox('assets/15.JPG')">
-                        <div class="polaroid-inner"><img src="assets/15.JPG" alt="Ricordo 15" loading="lazy"></div>
+                        <div class="polaroid-inner"><img src="assets/15.JPG" alt="Rico5rdo 15" loading="lazy"></div>
                     </div>
                     <div class="polaroid p16" onclick="openLightbox('assets/16.JPG')">
                         <div class="polaroid-inner"><img src="assets/16.JPG" alt="Ricordo 16" loading="lazy"></div>
@@ -190,12 +218,25 @@
         </footer>
     </main>
 
+    <!-- Music Player -->
+    <div class="music-player" id="musicPlayer">
+        <button class="music-btn" id="musicBtn" onclick="toggleMusic()">
+            <span class="music-icon">🎵</span>
+            <span class="music-label">Riproduci</span>
+        </button>
+        <audio id="bgMusic" loop>
+            <source src="assets/music.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
     <!-- Lightbox -->
-    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-        <button class="lightbox-close">&times;</button>
-        <div class="lightbox-content">
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+        <button class="lightbox-nav lightbox-prev" onclick="navigateLightbox(-1)">❮</button>
+        <div class="lightbox-content" onclick="closeLightbox()">
             <img id="lightboxImg" src="" alt="">
         </div>
+        <button class="lightbox-nav lightbox-next" onclick="navigateLightbox(1)">❯</button>
     </div>
 
     <script>
@@ -204,6 +245,15 @@
         // State
         const CORRECT_COLOR = 'viola';
         const MAX_SLIDER = 999999;
+
+        // Gallery images for lightbox navigation
+        const galleryImages = [
+            'assets/1.JPG', 'assets/2.JPG', 'assets/3.JPG', 'assets/4.JPG',
+            'assets/5.JPG', 'assets/6.JPG', 'assets/7.JPG', 'assets/8.JPG',
+            'assets/9.JPG', 'assets/10.JPG', 'assets/11.jpg', 'assets/12.JPG',
+            'assets/13.JPG', 'assets/14.JPG', 'assets/15.JPG', 'assets/16.JPG'
+        ];
+        let currentImageIndex = 0;
 
         // Elements
         const modalOverlay = document.getElementById('mainModalOverlay');
@@ -284,6 +334,9 @@
                         modalOverlay.style.display = 'none';
                         mainContent.classList.add('visible');
                         startConfetti();
+                        startPoemAnimation();
+                        startMusic();
+                        centerCarousels();
                     }, 800);
                 }, 1500);
 
@@ -299,10 +352,12 @@
             }
         }
 
-        // Lightbox Logic
+        // Lightbox Logic with Navigation
         function openLightbox(src) {
             const lb = document.getElementById('lightbox');
             const img = document.getElementById('lightboxImg');
+            currentImageIndex = galleryImages.findIndex(img => img.toLowerCase() === src.toLowerCase());
+            if (currentImageIndex === -1) currentImageIndex = 0;
             img.src = src;
             lb.classList.add('active');
             document.body.style.overflow = 'hidden';
@@ -312,6 +367,156 @@
             const lb = document.getElementById('lightbox');
             lb.classList.remove('active');
             document.body.style.overflow = '';
+        }
+
+        function navigateLightbox(direction) {
+            event.stopPropagation();
+            currentImageIndex += direction;
+            if (currentImageIndex < 0) currentImageIndex = galleryImages.length - 1;
+            if (currentImageIndex >= galleryImages.length) currentImageIndex = 0;
+            document.getElementById('lightboxImg').src = galleryImages[currentImageIndex];
+        }
+
+        // Keyboard navigation for lightbox
+        document.addEventListener('keydown', (e) => {
+            const lb = document.getElementById('lightbox');
+            if (!lb.classList.contains('active')) return;
+
+            if (e.key === 'ArrowLeft') navigateLightbox(-1);
+            if (e.key === 'ArrowRight') navigateLightbox(1);
+            if (e.key === 'Escape') closeLightbox();
+        });
+
+        // Music Player
+        let musicPlaying = false;
+
+        function startMusic() {
+            const audio = document.getElementById('bgMusic');
+            const btn = document.getElementById('musicBtn');
+            const label = btn.querySelector('.music-label');
+            const icon = btn.querySelector('.music-icon');
+
+            audio.play().then(() => {
+                musicPlaying = true;
+                label.textContent = 'Pausa';
+                icon.textContent = '🎶';
+                btn.classList.add('playing');
+            }).catch(() => {
+                // Autoplay blocked, user needs to click
+                console.log('Autoplay blocked, click to play');
+            });
+        }
+
+        function toggleMusic() {
+            const audio = document.getElementById('bgMusic');
+            const btn = document.getElementById('musicBtn');
+            const label = btn.querySelector('.music-label');
+            const icon = btn.querySelector('.music-icon');
+
+            if (musicPlaying) {
+                audio.pause();
+                label.textContent = 'Riproduci';
+                icon.textContent = '🎵';
+                btn.classList.remove('playing');
+            } else {
+                audio.play();
+                label.textContent = 'Pausa';
+                icon.textContent = '🎶';
+                btn.classList.add('playing');
+            }
+            musicPlaying = !musicPlaying;
+        }
+
+
+        // Poem Animation - Typewriter + Stanza Fade-in (Sequential)
+        async function startPoemAnimation() {
+            const stanzas = document.querySelectorAll('.stanza');
+            const dividers = document.querySelectorAll('.poem-divider');
+            const signature = document.getElementById('signature');
+
+            // Animate stanzas one by one, waiting for each to finish
+            for (let i = 0; i < stanzas.length; i++) {
+                stanzas[i].classList.add('visible');
+                await typewriterEffect(stanzas[i]);
+
+                // Show divider after stanza (if exists)
+                if (dividers[i]) {
+                    dividers[i].classList.add('visible');
+                    await delay(500); // Short pause after divider
+                }
+            }
+
+            // Reveal signature after poem is complete
+            await delay(300);
+            signature.classList.add('visible');
+        }
+
+        function delay(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+        function typewriterEffect(element) {
+            return new Promise((resolve) => {
+                const dropCap = element.querySelector('.drop-cap');
+                let dropCapLetter = '';
+
+                // If there's a drop cap, save it and remove from DOM temporarily
+                if (dropCap) {
+                    dropCapLetter = dropCap.textContent;
+                    dropCap.remove();
+                }
+
+                // Get text without drop cap
+                let text = element.textContent;
+
+                // Clear content
+                element.innerHTML = '';
+
+                // Re-add drop cap if exists
+                if (dropCapLetter) {
+                    const newDropCap = document.createElement('span');
+                    newDropCap.className = 'drop-cap';
+                    newDropCap.textContent = dropCapLetter;
+                    element.appendChild(newDropCap);
+                }
+
+                // Create a span for the typed text
+                const typedSpan = document.createElement('span');
+                element.appendChild(typedSpan);
+
+                let charIndex = 0;
+                const speed = 25; // ms per character
+
+                function type() {
+                    if (charIndex < text.length) {
+                        // Handle line breaks
+                        if (text.charAt(charIndex) === '\n') {
+                            typedSpan.innerHTML += '<br>';
+                        } else {
+                            typedSpan.textContent += text.charAt(charIndex);
+                        }
+                        charIndex++;
+                        setTimeout(type, speed);
+                    } else {
+                        // Typing finished, resolve the promise
+                        resolve();
+                    }
+                }
+
+                type();
+            });
+        }
+
+        // Center carousels on mobile
+        function centerCarousels() {
+            const carousels = document.querySelectorAll('.polaroid-container');
+            carousels.forEach(carousel => {
+                // Scroll to center
+                const scrollWidth = carousel.scrollWidth;
+                const clientWidth = carousel.clientWidth;
+                const scrollTo = (scrollWidth - clientWidth) / 2;
+                carousel.scrollLeft = scrollTo;
+            });
         }
 
         // Floating Hearts Animation
