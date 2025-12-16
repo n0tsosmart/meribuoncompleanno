@@ -434,7 +434,7 @@ body {
   background-clip: text;
   margin-bottom: 15px;
   position: relative;
-  display: inline-block;
+  display: block;
   animation: titleShimmer 3s ease-in-out infinite;
 }
 
@@ -450,8 +450,8 @@ body {
   }
 }
 
-/* Decorative underline with heart */
-.title-script::after {
+/* Decorative underline with heart - DISABLED */
+/* .title-script::after {
   content: '♥';
   position: absolute;
   bottom: -10px;
@@ -460,7 +460,7 @@ body {
   font-size: 1.2rem;
   -webkit-text-fill-color: var(--primary);
   animation: heartPulse 1.5s ease-in-out infinite;
-}
+} */
 
 @keyframes heartPulse {
 
@@ -1114,13 +1114,13 @@ footer {
   }
 
   .title-script {
-    font-size: 2.2rem;
+    font-size: 2.8rem;
   }
 
-  .title-script::after {
+  /* .title-script::after {
     font-size: 0.9rem;
     bottom: -5px;
-  }
+  } */
 
   .subtitle {
     font-size: 0.8rem;
